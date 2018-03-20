@@ -2,6 +2,8 @@ import { computed } from '@ember/object';
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+  links: Object.freeze([]),
+
   isIndexActive: computed('currentRouteName', function() {
     return this.isActiveChannel('index');
   }),
